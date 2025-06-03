@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Learn with Noor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdfcf9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #f4e4d4;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #5e4b3c;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: #7a6a58;
+      font-style: italic;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      background-color: #fffaf3;
+      box-shadow: inset 0 -1px 0 #ddd;
+    }
+    nav button {
+      background: none;
+      border: none;
+      font-weight: bold;
+      color: #5e4b3c;
+      cursor: pointer;
+      font-size: 1.1rem;
+      padding: 0.5rem 1.5rem;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    nav button.active, nav button:hover {
+      background-color: #f4e4d4;
+      color: #3e2f1f;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      display: none;
+    }
+    section.active {
+      display: block;
+      animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    h2 {
+      color: #5e4b3c;
+      border-bottom: 2px solid #f4e4d4;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      background: #f9f6f2;
+      margin-bottom: 0.7rem;
+      padding: 0.8rem 1rem;
+      border-left: 6px solid #f4e4d4;
+      font-size: 1.1rem;
+    }
+    .contact {
+      background-color: #fffaf3;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .contact label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #5e4b3c;
+    }
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+    .contact input:focus, .contact textarea:focus {
+      border-color: #f4e4d4;
+      outline: none;
+      box-shadow: 0 0 5px #f4e4d4;
+    }
+    .contact button {
+      margin-top: 1.5rem;
+      padding: 0.9rem 2rem;
+      background-color: #f4e4d4;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #5e4b3c;
+      transition: background-color 0.3s ease;
+    }
+    .contact button:hover {
+      background-color: #e6d6bd;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #f4e4d4;
+      font-size: 0.9rem;
+      color: #5e4b3c;
+      box-shadow: inset 0 1px 0 #ddd;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav {
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      nav button {
+        width: 100%;
+      }
+      main {
+        margin: 1rem auto 5rem auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Learn with Noor</h1>
+    <p>Your Child’s Learning Journey Starts Here</p>
+  </header>
+
+  <nav>
+    <button class="tab-btn active" data-tab="about">About</button>
+    <button class="tab-btn" data-tab="services">Services</button>
+    <button class="tab-btn" data-tab="contact">Contact</button>
+  </nav>
+
+  <main>
+    <section id="about" class="active">
+      <h2>About Me</h2>
+      <p>Hello! I'm Noor, a passionate tutor based in Doha, Qatar, teaching since the year 2000. Over the years, I have been dedicated to helping young learners in Grades 1 and 2 develop their skills and confidence in a supportive environment.</p>
+      <p>My teaching approach focuses on creating a warm, encouraging, and engaging space where children feel comfortable exploring new ideas. I use interactive lessons, games, and personalized learning plans tailored to each student's unique needs and pace.</p>
+      <p>Whether your child needs help with reading, writing, math, or building good study habits, I am here to support their growth and nurture a lifelong love of learning.</p>
+    </section>
+
+    <section id="services">
+      <h2>My Tutoring Services</h2>
+      <ul>
+        <li>📚 <strong>English & Math for Grades 1–2:</strong> Comprehensive lessons aligned with primary curriculum standards.</li>
+        <li>🧠 <strong>Interactive & Fun Learning:</strong> Engaging activities, educational games, and creative exercises.</li>
+        <li>🌍 <strong>Online Tutoring:</strong> Convenient lessons via Zoom or Google Meet — learn from home!</li>
+        <li>🎯 <strong>Personalized Lessons:</strong> Customized plans based on your child’s strengths and areas for growth.</li>
+        <li>👩‍👧‍👦 <strong>Parent Progress Updates:</strong> Regular feedback to keep you informed and involved.</li>
+        <li>⏰ <strong>Flexible Scheduling:</strong> Sessions available after school hours and weekends.</li>
+      </ul>
+      <p>My goal is to make learning enjoyable and effective, so your child builds confidence and skills that last a lifetime.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact">
+        <form action="mailto:n.albasha2607@gmail.com" method="post" enctype="text/plain">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Learn with Noor. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('main section');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all buttons
+        tabs.forEach(btn => btn.classList.remove('active'));
+        // Add active to clicked button
+        tab.classList.add('active');
+
+        // Hide all sections
+        sections.forEach(section => section.classList.remove('active'));
+        // Show the selected section
+        const selected = tab.getAttribute('data-tab');
+        document.getElementById(selected).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
